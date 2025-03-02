@@ -20,6 +20,14 @@
 </head>
 <body>
   <canvas id="gameCanvas" width="200" height="400"></canvas>
+  <!-- 放在 </canvas> 后，</body> 前 -->
+<div id="controls" style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px;">
+  <button onclick="playerMove(-1)" style="background:#FF69B4; color:#fff; border:none; border-radius:5px; padding:10px 20px;">左移</button>
+  <button onclick="playerRotate(1)" style="background:#00BFFF; color:#fff; border:none; border-radius:5px; padding:10px 20px;">旋转</button>
+  <button onclick="playerMove(1)" style="background:#FF7F50; color:#fff; border:none; border-radius:5px; padding:10px 20px;">右移</button>
+  <button onclick="playerDrop()" style="background:#32CD32; color:#fff; border:none; border-radius:5px; padding:10px 20px;">下落</button>
+</div>
+
   <script>
     const canvas = document.getElementById("gameCanvas");
     const ctx = canvas.getContext("2d");
